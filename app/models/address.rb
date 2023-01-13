@@ -1,5 +1,6 @@
 class Address < ApplicationRecord
   has_many :orders
-  belongs_to :customer, polymorphic: true
-  belongs_to :shop, polymorphic: true
+  belongs_to :customer
+  belongs_to :shop
+  belongs_to :addressable, polymorphic: true
 end
